@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sudoku Generator</title>
+
+    <link rel="stylesheet" href="https://unpkg.com/tailwindcss@2.2.19/dist/tailwind.min.css">
+    <link rel="stylesheet" href="style.css">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/fireworks-js@2.x/dist/index.umd.js"></script>
+    <script src="sudoku.js"></script>
+    <script src="script.js" defer></script>
+</head>
+
+<body class="bg-gray-100 min-h-screen flex items-center justify-center">
+    <div id="fireworks-container"></div>
+    <div id="game-container" class="bg-white p-8 rounded-lg shadow-lg">
+        <div class="mb-6">
+            <img src="logo.png" alt="logo" class="w-64 m-auto">
+        </div>
+        <div id="difficulty-selection" class="space-y-4">
+            <button class="difficulty-btn bg-green-500 hover:bg-green-600 text-white font-bold py-2 px-4 rounded w-full" data-difficulty="easy">Easy</button>
+            <button class="difficulty-btn bg-yellow-500 hover:bg-yellow-600 text-white font-bold py-2 px-4 rounded w-full" data-difficulty="medium">Medium</button>
+            <button class="difficulty-btn bg-red-500 hover:bg-red-600 text-white font-bold py-2 px-4 rounded w-full" data-difficulty="hard">Hard</button>
+        </div>
+        <div id="sudoku-grid" class="hidden mt-6">
+            <div id="timer" class="text-xl font-semibold mb-4 text-center">Time: 00:00</div>
+            <div id="congratulations" class="hidden text-2xl font-bold text-green-600 mb-4 text-center"></div>
+            <div id="grid" class="grid grid-cols-1 gap-0 border-2 border-gray-800"></div>
+            <div class="flex justify-between mt-2">
+                <button id="back-btn" class="bg-gray-500 hover:bg-gray-600 text-white font-bold py-2 px-4 rounded">Back to Levels</button>
+                <button id="restart-btn" class="bg-blue-500 hover:bg-blue-600 text-white font-bold py-2 px-4 rounded">Restart Game</button>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
